@@ -1,0 +1,213 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="Logo.png">
+
+
+        <style>
+          
+            #storydiv { 
+                  height: 100%;
+                  position: relative;         
+                }
+                        
+              #storydiv p {
+                  margin: 0;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+              }
+              
+              .maindiv{
+                  border:5px ridge rgb(12, 96, 206);
+                  margin:1%;
+                  border-radius:20px
+              }
+  
+              p{
+                  font-size:30px;
+                  font-weight: bold;
+              }
+  
+             
+  
+              #nextbtn, #backbtn, #newbtn{
+                  width: 25%;
+                  font-size:20px;
+                  margin-right: 5%;
+                  position: relative;
+                  
+              }
+  
+              #backbtn, #newbtn{
+                  display:none;
+              }
+  
+              #family{
+                  width:95%;
+                  height:95%;
+              }
+  
+              #about{
+                  font-weight: bold;
+                  font-size:40px;
+                  color:rgb(7, 7, 89)
+              }
+  
+              #story{ 
+                  font-size: 1.65vw;
+                  border-radius: 20px;
+              }
+  
+              #imgdiv{
+                  position:relative;
+              }
+           
+          
+          </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Types of Pronouns</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+            <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                <img id="family" src="2.jpg" style="width:100%;"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11"  id='storydiv'>
+                <p id="story" style="text-align:left; width:100%;">
+                    Let's begin today's class with a <span style="font-weight: bolder;font-style: italic;"> tongue twister.</span>
+
+                  
+                 
+                </p>     
+            </div>
+        </center>
+        </div>  
+        <br>
+        <div class="" style="text-align:center; padding-top:1%">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+  
+        </div>
+                   
+ 
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg", "Assets/7.jpg", "Assets/8.jpg", "Assets/9.jpg", "Assets/10.jpg", "Assets/11.jpg", "Assets/12.jpg", "Assets/13.jpg"];
+            var para=["<i>We already know that Nouns are words that represent people, places, things, or ideas. However, using the same noun repeatedly in a sentence or paragraph can make the sentence cumbersome and repetitive.</i> <br> <br> In Line 2 of the tongue twister,Proper noun   <span style='color: blue;'> ‘Betty’ </span> is replaced by   <span style='background-color: yellow;'> she</span>. In Line 3 of the tongue twister the Common noun  <span style='color: blue;'> ‘butter’ </span> is replaced by   <span style='background-color: yellow;'> it </span> two times.<br>    <span style='background-color: yellow;'>She</span> and    <span style='background-color: yellow;'> It </span> is helping us to avoid the repetition of the   <span style='font-weight: bolder;font-style:italic;'> nouns </span> ‘Betty’ and ‘butter’ time and again.",
+
+                        " We can say that pronouns are like little helpers that make speaking and writing easier for everyone. To make our sentences clearer and shorter, we will explore the different types of pronouns and their uses in sentences. </span><br> <br> Now, let's read an article about Galileo and see how he became the first astronomer.",
+
+                        "Galileo Galilei was born in the year 1564 in the town of Pisa, Italy. When he was 20 years old, he was studying in Pisa. His father wanted him to be a doctor, but Galileo was not interested in other subjects except Math. Because Math was the subject he liked, the court mathematician offered to tutor him privately to become a qualified mathematician. Galileo’s father was disappointed, but he agreed.",
+               
+                        "PQ. Can you spot the Pronoun used in this sentence?",
+
+                        "The word <span style='color: blue;font-weight:bolder;'> 'he' </span> is used to refer to Galileo, a specific person whose identity has been provided in the context. <br> <br>The <span style='color: blue;'> Pronoun “ He” is a </span> Personal Pronoun <span style='color: blue;'> which is used to address a particular male person.</span>",
+                     
+
+                       "Possessive pronouns are used to indicate or show possession of something by someone.<br> We use possessive pronouns when we want to show that <u> <span style='color: blue;'> something belongs to someone or something. </span></u><br><br> Here are a few more examples of Possessive Pronouns:<br> Example: <span style='color: blue;'>  mine, ours, theirs, his, hers, its.</span>",
+                     
+                      "Galileo began experimenting with different things, making inventions which he could sell for money. He had some success with his inventions, one of which was similar to a compass. What was this compass used for? This compass could be used to measure plots of land. He had already experimented with pendulums, thermometers, and magnets. When he heard that a Dutch inventor had invented a spyglass, but was keeping it a secret, Galileo decided to work on one of his own.",
+
+                      "Before knowing about the uses of the compass let's focus on the word  <span style='background-color:aqua;'> “what” </span> <br> <br> <span style='background-color:aqua;'>  “What” </span> is the ONLY word in the question which is helping in forming the question. No other word in the sentence can do it. <span style='color: blue;'> Thus, the word <i> “What” </i> is an Interrogative Pronoun as it inquires about the uses of Compass. <br> <br> <span style='background-color: yellow;'> Interrogative pronouns </span> are used to inquire about something or someone. </span>",
+
+                      "Questions are an indispensable part of our daily conversations. Questions are an indispensable part of our daily conversations in all spheres of life, at home, in the office, at school etc. Interrogative Pronouns help us in forming and asking only those questions about specific people or things which help us gather information or opinion.",
+
+                      "“This” in the answer:is helping us understand that the compass that is being talked about is the very compass that was referred to in the question.<br> <br> Thus, we can say that words like This/That help us in referring to things in discussion and in pointing out whether something is near or far. These words are called <span style='background-color: yellow;'> Demonstrative Pronouns.</span><br><br> <span style='color: blue;'> Demonstrative pronouns help us talk about things without using their names always. They help us communicate efficiently.</span><br><br> There are only for Demonstrative Pronouns:<br> ● <i> “This “ </i> and <i> “That “ </i> are used for singular nouns <br> ●  <i>“These” </i> and <i> “Those” </i> are used for plural nouns.",
+
+
+                      "In 1609, he constructed a telescope. The telescope which Galileo made could magnify things and appear ten times larger than real life.<br><br>In the story we come across the question below “What was this compass used for” And the next sentence answers the very question.  One night, he pointed his telescope toward the sky and made his first space observations. He observed himself that the moon was not smooth like everyone thought. The moon was covered in bumps and craters",
+
+                      " <span style='color: blue;'>“Which” </span> in the above sentence is connecting two clauses. “Which Galileo made” and “The telescope could magnify things and appear ten times larger.” “Which” is a <u> relative pronoun </u> because it helps in introducing the  <u>relative clause </u> “Which Galileo made” - which is providing additional and important information about the telescope. <br><br> “Which Galileo made” is a dependent clause because it does not make complete sense alone even though it has a subject and a verb. “The telescope could magnify things and appear ten times larger” is an independent clause which makes complete sense on its own. <br><br>Thus,  a <span style='background-color: yellow;'> relative pronoun </span> introduces a relative clause to the sentence and connects an independent clause to a relative clause.",
+
+                      "In, <span style='color: blue;font-style:italic;'> “Galileo himself observed...” </span> <span style='font-weight:bolder;'> “Galileo” </span> is the subject and the word <span style='font-weight:bolder;'> “himself” </span> is referring back to Galileo, the subject. <span style='font-weight:bolder;'> “Himself”</span> is a reflexive pronoun because it is referring back to the subject of the sentence <span style='font-weight:bolder;'> “Galileo” </span> <br> <br> <span style='background-color: yellow;'> Reflexive pronouns </span> <span style='color: blue;'> are used when the subject and the object of a sentence refer to the same person or thing. </span> <br> <br> ● Words that are used as reflexive pronouns are <span style='font-weight:bolder;font-style:italic;'> himself, herself, oneself, itself, yourself and myself.</span>",
+
+                      "Anyone who knows history can say that Galileo Galilei was the first to invent the telescope. But with time, science and technology advanced, and others also made improvements to the telescope, the wonderful device that allows us to see from a distance. The first proper telescope was made by Hans Lippershey in the early 1600s.",
+                      
+                    ]
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("about").innerHTML = "Galileo and His Telescope";
+                    document.getElementById("story").innerHTML = "The last part of the passage tells us that <span style='color: blue;'> Anyone who knows history can say that Galileo Galilei was the first to invent the telescope. </span> <span style='color: blue;font-style:italic;'> “Anyone” </span> does not specify or mention a particular person, thus it is an <u> indefinite pronoun. </u> <br> <br> <span style='background-color:yellow;'> Indefinite Pronouns </span> are words used to refer to any person or a thing that is NOT known or NOT specific. Examples: Someone, Everybody, Somebody, Anyone,Anybody etc."
+                    document.getElementById("family").src = "last.jpg";
+                   
+                   
+                   
+
+                    
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Galileo and His Telescope"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Types of Pronouns"
+                    document.getElementById("story").innerHTML = ' Lets begin today class with a <span style="font-weight: bolder;font-style: italic;"> tongue twister.</span>';
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="Galileo and His Telescope"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
